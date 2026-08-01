@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+  <style>
+    form {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    label {
+      display: block;
+    }
+
+    input[type="text"],
+    select {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      background-color: #a0e5cc;
+      background-image: url("square.gif");
+      transition: width 0.4s ease-in-out;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      background-color: #4caf50;
+      color: white;
+      padding: 14px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    input[type="text2"] {
+      width: 130px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: white;
+      background-image: url("tree.jpg");
+      background-position: 10px 10px;
+      background-repeat: no-repeat;
+      padding: 12px 20px 12px 40px;
+      transition: width 0.4s ease-in-out;
+    }
+
+    input[type="text2"]:focus {
+      width: 100%;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      padding: 12px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      font-size: 16px;
+      resize: none;
+    }
+
+    .responsive-form {
+      max-width: 600px;
+      width: 100%;
+      border-radius: 4px;
+      border: 2px solid #04aa6d;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    label {
+      min-width: 48%;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    select {
+      min-width: 45%;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+    }
+
+    textarea {
+      min-width: 45%;
+      height: 150px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 10px;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      background-color: #04aa6d;
+      color: white;
+      padding: 14px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    @media screen and (max-width: 600px) {
+      label,
+      input[type="text"],
+      input[type="submit"],
+      select,
+      textarea {
+        flex: 100%;
+        min-width: 100%;
+      }
+    }
+  </style>
+  <body>
+    <h2>Style an HTML Form with CSS</h2>
+
+    <form action="/action_page.php">
+      <label for="fname">First Name</label>
+      <input
+        type="text"
+        id="fname"
+        name="firstname"
+        placeholder="Your name.."
+      />
+
+      <label for="lname">Last Name</label>
+      <input
+        type="text"
+        id="lname"
+        name="lastname"
+        placeholder="Your last name.."
+      />
+
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+        <option value="usa">USA</option>
+      </select>
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <h2>Animate width of search input</h2>
+
+    <form>
+      <input type="text2" name="search" placeholder="Search.." />
+    </form>
+
+    <h2>Styling textarea</h2>
+
+    <p>
+      <strong>Tip:</strong> Use the resize property to prevent textareas from
+      being resized (disable the "grabber" in the bottom right corner):
+    </p>
+
+    <form>
+      <textarea>Some text...</textarea>
+    </form>
+
+    <h2>Responsive Form</h2>
+    <p>Resize the screen to see the form layout change!</p>
+
+    <div class="responsive-form">
+      <form action="/action_page.php">
+        <label for="fname">First Name:</label>
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="Your first name"
+        />
+
+        <label for="lname">Last Name:</label>
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="Your last name"
+        />
+
+        <label for="country">Country:</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+
+        <label for="message">Message:</label>
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Write something.."
+        ></textarea>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
