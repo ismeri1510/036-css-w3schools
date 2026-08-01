@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+  <head>
+    <style>
+      p::first-line {
+        color: red;
+        font-variant: small-caps;
+        font-size: 19px;
+      }
+
+      p::first-letter {
+        color: #0077ff;
+        font-size: xx-large;
+      }
+
+      p.intro::first-letter {
+        color: #00ff5e;
+        font-size: 200%;
+      }
+
+      h3::before {
+        content: url(sqorange.gif);
+      }
+      ::marker {
+        color: red;
+        font-size: 23px;
+      }
+
+      ::selection {
+        color: red;
+        background: yellow;
+      }
+
+      button {
+        font-size: 15px;
+        padding: 5px 15px;
+      }
+
+      dialog::backdrop {
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Using ::first-line</h2>
+
+    <p>
+      You can use the ::first-line pseudo-element to add a special effect to the
+      first line of a text. Some more text. And even more, and more, and more,
+      and more, and more, and more, and more, and more, and more, and more, and
+      more, and more.
+    </p>
+
+    <h2>Using ::first-letter</h2>
+
+    <p>
+      You can use the ::first-letter pseudo-element to add a special effect to
+      the first character of a text!
+    </p>
+
+    <h2>Using pseudo-element and HTML class</h2>
+
+    <p class="intro">This is an introduction.</p>
+    <p>This is a paragraph with some text. A bit more text even.</p>
+
+    <h2>Using ::before</h2>
+
+    <h3>This is a heading</h3>
+    <p>
+      The ::before pseudo-element inserts content before the content of an
+      element.
+    </p>
+    <h2>Using ::marker</h2>
+
+    <ul>
+      <li>Coffee</li>
+      <li>Tea</li>
+      <li>Milk</li>
+    </ul>
+
+    <ol>
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+    </ol>
+
+    <h2>Using ::selection</h2>
+
+    <p>Select some text on this page.</p>
+    <p>This is a paragraph.</p>
+    <div>This is some text in a div element.</div>
+
+    <h2>Using ::backdrop</h2>
+
+    <p>Click the button to show a dialog box:</p>
+
+    <button id="dialogBtn">Show dialog</button>
+
+    <dialog id="myDialog">
+      <form method="dialog">
+        <p>The background behind this dialog, is a backdrop.</p>
+        <button>Close dialog</button>
+      </form>
+    </dialog>
+
+    <script>
+      const dialogBtn = document.getElementById("dialogBtn");
+      const myDialog = document.getElementById("myDialog");
+      dialogBtn.addEventListener("click", () => myDialog.showModal());
+    </script>
+  </body>
+</html>
